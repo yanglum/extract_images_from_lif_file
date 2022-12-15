@@ -1,0 +1,32 @@
+settings:
+# input
+    directory: '22_12_10'
+    filename: 'ALL'
+# scaling
+    convert_16_to_8bit: True 
+    scale_image: True
+    auto_scale: False
+    # if auto_scale = False, adjust the following for each channel:
+    min: [0,0]
+    max: [60,30]
+# z_plane
+    z_stack: True
+    # if z_stack = True, set one of the following to True:
+    find_best_z_plane: False
+    max_projection: True
+# output
+    return_composite: True
+    return_channels: False
+    output_file_type: '.tif'
+
+# this is for save_lif_as_tif
+# iterates through each image (and each mosaic tile of the image, each time of timelapse) and returns either composites (first 3 channels only in RGB) or individual channels
+# input filename should be written as a string that ends in '.lif', eg 'file.lif' or a list of strings that end in '.lif', eg ['file1.lif', 'file2.lif', 'file3.lif']
+# to input every '.lif' file in the directory, set filename to the magic word 'ALL'
+# return_composite only handles up to 3 channels currently
+# can change '.tif' to other extensions, such as '.png', '.jpg', etc
+# if output in 16bit, will output in raw only
+# if scale_image: True, then output will be scaled; otherwise, returns raw images
+#   if auto_scale: True, images will be scaled based on higher intensity pixel of each channel of each image (normalization)
+#   if auto_scale: False, then will scale based on provided scale factors min and max (one for each channel, separated by comma)
+#       for ecSeg, try DAPI max=60 (FISH channel max=30)
