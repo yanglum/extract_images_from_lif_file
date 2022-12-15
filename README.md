@@ -1,4 +1,4 @@
-# extract_lif_file
+# extract_images_from_Lif_file
 Extracts images from Lif files and outputs in common image formats
 
 Takes Lif file and extracts each image (TileScan, Position, etc) and outputs the image (one for each tile in dimension "s" for mosaic images and one for each time in dimension "t" for timelapse images) with user-defined histogram and z project adjustment.
