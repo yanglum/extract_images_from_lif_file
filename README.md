@@ -14,3 +14,6 @@ Takes Lif file and extracts each image (TileScan, Position, etc) and outputs the
 Currently doesn't really support 16 bit images (converting to 8 bit is preferred)
 Currently doesn't support more than 3 channels for outputing composites
 Currently only outputs channels in the pre-determined order blue, green, red for outputing composites
+
+Adjust settings using the config.yml file
+Then run the save_lif_as_tif.py script
