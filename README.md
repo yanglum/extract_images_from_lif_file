@@ -16,8 +16,7 @@ Requirements:
 - PyYAML 6.0
 
 Caveats:
-1) Currently doesn't really support 16 bit images (converting to 8 bit is preferred)
-2) Currently doesn't support more than 3 channels for outputing composites
-3) Currently only outputs channels in the pre-determined order blue, green, red for outputing composites
+1) Currently doesn't support more than 3 channels for outputing composites
+2) Currently only outputs channels in the pre-determined order blue, green, red for outputing composites
 
 
