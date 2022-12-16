@@ -19,4 +19,5 @@ Caveats:
 1) Currently doesn't support more than 3 channels for outputing composites
 2) Currently only outputs channels in the pre-determined order blue, green, red for outputing composites
 
-v13: fully compatible with 16bit
+Change log:
+v13) fully compatible with 16bit
