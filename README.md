@@ -20,5 +20,5 @@ Caveats:
 2) Currently only outputs channels in the pre-determined order blue, green, red for outputing composites
 
 Change log:
-- v14: added ability to specify channel color order when returning composites (still only able to return 3 channels)
-- v13: fully compatible with 16bit
+- 02/11/23 (v14): added ability to specify channel color order when returning composites (still only able to return 3 channels)
+- 12/15/22 (v13): fully compatible with 16bit
