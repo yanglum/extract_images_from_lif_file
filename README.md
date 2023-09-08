@@ -17,7 +17,6 @@ Requirements:
 
 Caveats:
 1) Currently doesn't support more than 3 channels for outputing composites
-2) Currently only outputs channels in the pre-determined order blue, green, red for outputing composites
 
 Change log:
 - 07/25/23 (v15): added ability to slice through z stack for making max projections
