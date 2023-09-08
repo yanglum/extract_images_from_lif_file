@@ -97,7 +97,7 @@ def extract_from_lif(filename, inpath, convert_16_to_8bit, scale_image, auto_sca
 		if find_best_z:
 			name_addon += '_bestZ'
 		elif max_projection:
-			name_addon += '_maxProj_'+str(start_slice)+'_'+str(end_slice)
+			name_addon += '_maxProj_'+str(start_slice)+'-'+str(end_slice)
 			
 	new = LifFile(os.path.join(inpath, filename))
 	dir_name = filename[:-4]
@@ -121,7 +121,7 @@ def extract_from_lif(filename, inpath, convert_16_to_8bit, scale_image, auto_sca
 					for i in range(comp[j].shape[2]):
 						cv2.imwrite(os.path.join(inpath, dir_name, 'image'+str(count)+time_addon+tile_addon+'_channel'+str(i)+name_addon+extension), comp[j][:,:,i])
 					if j%10==0:
-						print('.')
+						print('.', end='', flush=True)
 			if return_composite:
 				channel_dict = {'red':2, 'green':1, 'blue':0} # default channel order is BGR
 				channel_order_translated = [channel_dict[x] for x in channel_order]
@@ -138,9 +138,9 @@ def extract_from_lif(filename, inpath, convert_16_to_8bit, scale_image, auto_sca
 						composite[:,:,channel_order_translated[i]] = comp[j][:,:,i]
 					cv2.imwrite(os.path.join(inpath, dir_name, 'image'+str(count)+time_addon+tile_addon+'_composite'+name_addon+extension), composite)
 					if j%10==0:
-						print('.')
+						print('.', end='', flush=True)
 		count+=1
 		if count%10==0:
-			print('.')
+			print('.', end='', flush=True)
 	# if name is too long, won't output file
-	print('images saved to', os.path.join(inpath, dir_name))
+	print('images saved to', os.path.join(inpath, dir_name), end='', flush=True)

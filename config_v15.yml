@@ -1,14 +1,14 @@
 settings:
 # input
-    directory: '23_07_15'
-    filename: ['COLO320DM_coverslip_48hr_mCherry_375ul_Lipofectamine_MYCgreen_mCherry568_Ki67647_Lng_LVCC.lif']
-# scaling
+    directory: 'D:\Lu_images\23_09_07\LVCC'
+    filename: 'ALL'
+# intensity histogram scaling
     convert_16_to_8bit: False
     scale_image: True
     auto_scale: False
     # if auto_scale = False, set the following for each channel:
     min: [0,0,0,0]
-    max: [65535,10000,65535,40000]
+    max: [20000,8000,8000]
 # z_plane
     z_stack: True
     # if z_stack = True, set one of the following to True:
@@ -22,10 +22,10 @@ settings:
 # output
     return_composite: False
     # if return_composite = True, set the channel output order:
-    channel_order: ['red', 'blue', 'green']
+    channel_order: ['blue', 'red', 'green']
     return_channels: True
     output_file_type: '.png'
-
+    
 # this is for save_lif_as_tif
 # only accepts 16bit and 8bit images
 # iterates through each image (and each mosaic tile of the image, each time of timelapse) and returns either composites (first 3 channels only in RGB) or individual channels

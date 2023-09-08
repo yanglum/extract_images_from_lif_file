@@ -55,5 +55,7 @@ else:
 	exit()
 
 filelist = [x for x in filelist if x.endswith('.lif')]
+print('initiating...', end='')
 for filename in filelist:
+	print('\nextracting from ', filename, end='', flush=True)
 	extract_from_lif(filename, inpath, convert_16_to_8bit, scale_image, auto_scale, scale_min, scale_max, z_stack, find_best_z, max_projection, auto_slice, start_slice, end_slice, return_composite, channel_order, return_channels, extension)
