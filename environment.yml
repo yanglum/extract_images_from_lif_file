@@ -161,4 +161,3 @@ dependencies:
     - scprep==1.0.13
     - tasklogger==1.0.0
     - wrapt==1.12.1
-prefix: C:\Users\luyan\Anaconda3\envs\readlif
